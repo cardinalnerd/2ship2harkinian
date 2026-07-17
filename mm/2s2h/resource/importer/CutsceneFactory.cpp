@@ -116,7 +116,7 @@ ResourceFactoryBinaryCutsceneV0::ReadResource(std::shared_ptr<Ship::File> file,
                     if (reader->GetEndianness() != Ship::Endianness::Native) {
                         numEntries = header1 >> 16 & 0xFFFF;
                     }
-
+                    
                     cutscene->commands.push_back(header1);
                     if (numEntries == 0xFFFF) {
                         break; // Last command is HH(0xFFFF, 0004) which was already read in and pushed into the vector

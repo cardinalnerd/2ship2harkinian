@@ -74,7 +74,6 @@ void DrawVoyage3Description() {
         ImGui::EndTable();
     }
     ImGui::Separator();
-	ImGui::Separator();
     if (ImGui::BeginTable("Voyage3Req", 2)) {
         ImGui::TableNextColumn();
         ImGui::TextColored(TEXT_COLOR(ORANGE), "Included Shuffles");
@@ -97,7 +96,6 @@ void DrawVoyage3Description() {
         ImGui::EndTable();
     }
     ImGui::Separator();
-	ImGui::Separator();
     ImGui::TextColored(TEXT_COLOR(ORANGE), "Hints");
 
     for (auto& [key, value] : voyage3Hints) {
@@ -106,7 +104,6 @@ void DrawVoyage3Description() {
         ImGui::Separator();
     }
 
-	ImGui::Separator();
 	//New Addition to add forced junk information
     ImGui::TextColored(TEXT_COLOR(ORANGE), "Forced Junk");
 

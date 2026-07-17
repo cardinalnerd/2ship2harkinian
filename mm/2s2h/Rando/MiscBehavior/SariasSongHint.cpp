@@ -146,8 +146,8 @@ std::vector<RandoItemId> Rando::GetSariaPriorityItemCandidates() {
 static int playedSariasSongState = 0;
 
 RandoCheckId GetProgressiveCheckInLogic() {
-    std::vector<RandoItemId> priorityItems = Rando::GetSariaPriorityItemsFromSave(gSaveContext.save.shipSaveInfo.rando);
-    
+	std::vector<RandoItemId> priorityItems = Rando::GetSariaPriorityItemsFromSave(gSaveContext.save.shipSaveInfo.rando);
+	
     std::unordered_map<RandoRegionId, Rando::Logic::RegionTimeState> regionTimeStates =
         Rando::Logic::InitializeRegionTimeStates(RR_MAX);
     std::set<RandoRegionId> reachableRegions = {};
@@ -253,7 +253,7 @@ void Rando::MiscBehavior::SariasSongHint() {
 
         if (sLastPlayedSong == OCARINA_SONG_SARIAS) {
             *should = true;
-            playedSariasSongState = 1;
+			playedSariasSongState = 1;
             Message_StartTextbox(gPlayState, 0x1B95, NULL);
             gPlayState->msgCtx.ocarinaMode = OCARINA_MODE_PROCESS_RESTRICTED_SONG;
         }
@@ -277,7 +277,7 @@ void Rando::MiscBehavior::SariasSongHint() {
                 CustomMessage::Replace(&entry.msg, "{{location}}",
                                        Rando::StaticData::GetLocationNameForHint(randoCheckId, true));
                 Rando::RemoveItem(RI_SONG_SARIA);
-                SaveManager_PersistSariaHintsAvailable();
+				SaveManager_PersistSariaHintsAvailable();
             }
         } else if (playedSariasSongState == 0) {
             return;

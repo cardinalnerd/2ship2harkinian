@@ -1222,17 +1222,16 @@ void DrawFlagTableArray16(const FlagTable& flagTable, uint16_t& flags) {
     ImGui::PopID();
 }
 
-template <typename T> static void DrawFlagTableArrayRowImpl(const FlagTable& flagTable, uint16_t row, T& flags) {
-    constexpr int16_t width = sizeof(T) * 8;
+void DrawFlagTableArray8(const FlagTable& flagTable, uint16_t row, uint8_t& flags) {
     ImGui::PushID(flagTable.name);
-    for (int16_t flagIndex = 0; flagIndex < width; flagIndex++) {
-        if (flagIndex != 0) {
+    for (int8_t flagIndex = 0; flagIndex < 8; flagIndex++) {
+        if ((flagIndex % 8) != 0) {
             ImGui::SameLine();
         }
         ImGui::PushID(flagIndex);
-        T bitMask = 1 << flagIndex;
+        uint8_t bitMask = 1 << flagIndex;
         bool flag = (flags & bitMask) != 0;
-        FlagEntry flagEntry = flagTable.entries.at(row * width + flagIndex);
+        FlagEntry flagEntry = flagTable.entries.at(row * 8 + flagIndex);
         PushStyleCheckbox(LightBlue);
         ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(4.0f, 6.0f));
         std::string id = fmt::format("####{}", flagIndex);
@@ -1255,14 +1254,6 @@ template <typename T> static void DrawFlagTableArrayRowImpl(const FlagTable& fla
         ImGui::PopID();
     }
     ImGui::PopID();
-}
-
-void DrawFlagTableArray16(const FlagTable& flagTable, uint16_t row, uint16_t& flags) {
-    DrawFlagTableArrayRowImpl(flagTable, row, flags);
-}
-
-void DrawFlagTableArray8(const FlagTable& flagTable, uint16_t row, uint8_t& flags) {
-    DrawFlagTableArrayRowImpl(flagTable, row, flags);
 }
 
 void DrawFlagTableArray8Mask(const FlagTable& flagTable, uint16_t row, uint8_t& flags) {
