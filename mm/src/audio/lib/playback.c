@@ -204,7 +204,7 @@ void AudioPlayback_ProcessNotes(void) {
                 continue;
             }
 #endif
-            
+
             if ((note != playbackState->parentLayer->note) && (playbackState->status == PLAYBACK_STATUS_0)) {
                 playbackState->adsr.action.s.release = true;
                 playbackState->adsr.fadeOutVel = gAudioCtx.audioBufferParameters.updatesPerFrameInv;

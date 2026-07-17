@@ -64,7 +64,7 @@ nlohmann::json curatedPresetJ = R"(
             "LogLevel": 2
         },
         "gEnhancements": {
-			"Camera": {
+            "Camera": {
                 "FixTargettingCameraSnap": 1
             },
             "Cutscenes": {
@@ -81,15 +81,15 @@ nlohmann::json curatedPresetJ = R"(
             },
             "Cycle": {
                 "DoNotResetBottleContent": 1,
-				"DoNotResetChateau": 1,
+                "DoNotResetChateau": 1,
                 "DoNotResetConsumables": 1,
                 "DoNotResetRazorSword": 1,
                 "DoNotResetRupees": 1,
-				"DoNotResetScarecrowSong": 1,
+                "DoNotResetScarecrowSong": 1,
                 "DoNotResetTimeSpeed": 1,
                 "KeepExpressMail": 1,
                 "OceansideWalletAnyDay": 1,
-				"SaveOnMoonCrash": 1,
+                "SaveOnMoonCrash": 1,
                 "StopOceansideSpiderHouseSquatter": 1
             },
             "Dialogue": {
@@ -99,7 +99,7 @@ nlohmann::json curatedPresetJ = R"(
             },
             "DifficultyOptions": {
                 "GoronRace": 1,
-				"JinxedTimer": 20,
+                "JinxedTimer": 20,
                 "LowerBankRewardThresholds": 1
             },
             "Dpad": {
@@ -114,7 +114,7 @@ nlohmann::json curatedPresetJ = R"(
             "Fixes": {
                 "CompletedHeartContainerAudio": 1,
                 "ControlCharacters": 1,
-				"DekuButlerFixShockLoopAnimation": 1,
+                "DekuButlerFixShockLoopAnimation": 1,
                 "FierceDeityZTargetMovement": 1
             },
             "Graphics": {
@@ -127,15 +127,15 @@ nlohmann::json curatedPresetJ = R"(
                 "FixSceneGeometrySeams": 1,
                 "IncreaseActorDrawDistance": 5
             },
-			"Items": {
+            "Items": {
                 "ColorPictograph": 1,
                 "RemoveExplosiveLimit": 1
             },
             "Masks": {
-				"3DSMaskEquip": 1,
+                "3DSMaskEquip": 1,
                 "FastTransformation": 1,
                 "FierceDeitysAnywhere": 1,
-				"BlastMaskCooldown": 0.0,
+                "BlastMaskCooldown": 0.0,
                 "PersistentBunnyHood": {
                     "Enabled": 1
                 }
@@ -185,7 +185,7 @@ nlohmann::json curatedPresetJ = R"(
                 "OoTFasterSwim": 1,
                 "PowerCrouchStab": 1,
                 "SideRoll": 1,
-				"SoilPatch": 1,
+                "SoilPatch": 1,
                 "TatlISG": 1,
                 "WoodfallMountainAppearance": 1
             },
@@ -196,7 +196,7 @@ nlohmann::json curatedPresetJ = R"(
                 "PersistentOwlSaves": 1
             },
             "Songs": {
-				"BetterOwlWarpMenu": 1,
+                "BetterOwlWarpMenu": 1,
                 "BetterSongOfDoubleTime": 1,
                 "EnableSunsSong": 1,
                 "FasterSongPlayback": 1,
@@ -206,10 +206,10 @@ nlohmann::json curatedPresetJ = R"(
                 "ZoraEggCount": 1
             },
             "Timesavers": {
-				"AlwaysShowShrineFeathers": 1,
+                "AlwaysShowShrineFeathers": 1,
                 "DampeDiggingSkip": 1,
                 "FastChests": 1,
-				"FasterBottles": 1,
+                "FasterBottles": 1,
                 "FasterSceneTransitions": 1,
                 "GalleryTwofer": 1,
                 "MarineLabHP": 1,
@@ -287,7 +287,6 @@ nlohmann::json curatedPresetJ = R"(
 }
 )"_json;
 
-// Addition of Voyage 3 Preset
 nlohmann::json voyage3PresetJ = R"(
 {
     "ClearCVars": [
@@ -306,9 +305,12 @@ nlohmann::json voyage3PresetJ = R"(
             "SpeedModifier": {
                 "Mode": 0
             }
+		    },
+		    "gDisplayOverlay": {
+            "Mode": 1
         },
         "gEnhancements": {
-			"Camera": {
+			      "Camera": {
                 "DebugCam": {
                     "Enable": 0
                 }
@@ -346,7 +348,7 @@ nlohmann::json voyage3PresetJ = R"(
                 "SkipBottlePickupMessages": 1
             },
             "DifficultyOptions": {
-				"BossHealthMultiplier": 0,
+				        "BossHealthMultiplier": 0,
                 "DamageMultiplier": 0,
                 "DekuGuardSearchBalls": 0,
                 "DeleteFileOnDeath": 0,
@@ -358,7 +360,7 @@ nlohmann::json voyage3PresetJ = R"(
                 "HyperEnemies": 0,
                 "JinxedTimer": 60,
                 "LowerBankRewardThresholds": 1,
-				"NoHeartDrops": 0,
+				        "NoHeartDrops": 0,
                 "NoRandomDrops": 0,
                 "PermanentHeartLoss": 0
             },
@@ -378,7 +380,7 @@ nlohmann::json voyage3PresetJ = R"(
                 "CompletedHeartContainerAudio": 1,
                 "ConsoleCrashes": 1,
                 "ControlCharacters": 1,
-				"DekuButlerFixShockLoopAnimation": 0,
+				        "DekuButlerFixShockLoopAnimation": 0,
                 "FierceDeityZTargetMovement": 1,
                 "FixTexturesOOB": 1
             },
@@ -387,7 +389,7 @@ nlohmann::json voyage3PresetJ = R"(
             },
             "Graphics": {
                 "3DItemDrops": 1,
-				"ActorCullingAccountsForWidescreen": 0,
+				        "ActorCullingAccountsForWidescreen": 0,
                 "AuthenticLogo": 1,
                 "DisableBlackBars": 1,
                 "FixSceneGeometrySeams": 0,
@@ -406,7 +408,7 @@ nlohmann::json voyage3PresetJ = R"(
             "Masks": {
                 "3DSMaskEquip": 1,
                 "BlastMaskCooldown": 3.0,
-                "BlastMaskKeg": 1,
+                "BlastMaskKeg": 0,
                 "FastTransformation": 1,
                 "FierceDeitysAnywhere": 1,
                 "GoronRollingFastSpikes": 0,
@@ -428,9 +430,9 @@ nlohmann::json voyage3PresetJ = R"(
                 "HoneyAndDarlingDay1": 8,
                 "HoneyAndDarlingDay2": 8,
                 "HoneyAndDarlingDay3": 16,
-				"RandomizeShootingGalleryOctoroks": 0,
+				        "RandomizeShootingGalleryOctoroks": 0,
                 "RomaniTargetPractice": 10,
-				"SkipHorseRace": 0,
+				        "SkipHorseRace": 0,
                 "SkipLittleBeaver": 1,
                 "SwampArcheryScore": 2120,
                 "SwordsmanSchoolScore": 30,
@@ -467,10 +469,10 @@ nlohmann::json voyage3PresetJ = R"(
                 "ConstantFlipsHops": 0,
                 "JPGrottos": 0,
                 "OoTFasterSwim": 0,
-				"PauseBufferWindow": 0,
+				        "PauseBufferWindow": 0,
                 "PowerCrouchStab": 2,
                 "SideRoll": 0,
-				"SoilPatch": 1,
+				        "SoilPatch": 1,
                 "TatlISG": 1,
                 "WoodfallMountainAppearance": 1
             },
@@ -513,13 +515,13 @@ nlohmann::json voyage3PresetJ = R"(
         },
         "gForceCursorVisibility": 1,
         "gMatchRefreshRate": 0,
-		"gModes": {
-			"MirroredWorld": {
+		    "gModes": {
+		      	"MirroredWorld": {
                 "Mode": 0,
                 "StoneTowerTempleFix": 0
             },
-			"TimeMovesWhenYouMove": 0
-		},
+			      "TimeMovesWhenYouMove": 0
+		    },
         "gRando": {
             "CSMC": 1,
             "Enabled": 1,
@@ -542,7 +544,7 @@ nlohmann::json voyage3PresetJ = R"(
                 "RO_HINTS_TRANSFORMATIONS": 1,
                 "RO_MINIMUM_STRAY_FAIRIES": 5,
                 "RO_PLENTIFUL_ITEMS": 0,
-				"RO_PLACEMENT_BOSS_KEYS": 1,
+		        		"RO_PLACEMENT_BOSS_KEYS": 1,
                 "RO_PLACEMENT_SMALL_KEYS": 0,
                 "RO_PLACEMENT_STRAY_FAIRIES": 0,
                 "RO_SHUFFLE_BOSS_REMAINS": 1,
@@ -589,12 +591,12 @@ nlohmann::json voyage3PresetJ = R"(
                 "Shock": 1
             }
         },
-		"gSettings": {
-			"Menu": {
-				"Popout": 0
-			},
-			"SimulatedInputLag": 0
-		}
+		    "gSettings": {
+		    	"Menu": {
+		    		"Popout": 0
+			    },
+			    "SimulatedInputLag": 0
+		    }
     },
     "type": "2S2H_PRESET",
     "version": 1
@@ -609,7 +611,7 @@ void PresetManager_RefreshPresets() {
     presets.insert(
         { "Defaults (Everything Off)", { defaultsPresetJ, { "Developer Tools", "Enhancements", "HUD", "Rando" } } });
     presets.insert({ "Curated", { curatedPresetJ, { "Developer Tools", "Enhancements", "HUD" } } });
-    presets.insert({ "Voyage 3: A New World's Bounty", { voyage3J, { "Developer Tools", "Enhancements", "Rando" } } });
+    presets.insert({ "Voyage 3", { voyage3PresetJ, { "Developer Tools", "Enhancements", "Rando" } } });
 
     // ensure the presets folder exists
     if (!std::filesystem::exists(presetsFolderPath)) {

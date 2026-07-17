@@ -1350,7 +1350,7 @@ void Item_DropCollectibleRandom(PlayState* play, Actor* fromActor, Vec3f* spawnP
     if (params < 0x101) {
         dropId = sDropTable[params + dropTableIndex];
         dropQuantity = sDropTableAmounts[params + dropTableIndex];
-
+       
         // New Features: No random drops + No heart/healing drops
         if (!(GameInteractor_Should(VB_DROP_COLLECTIBLE, true, *spawnPos, dropId))) {
             return;
